@@ -1,0 +1,7 @@
+.vscode/
+__pycache__/
+migrations/
+.pytest_cache
+.sonarlint
+poetry.lock
+pyproject.toml
