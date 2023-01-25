@@ -2,25 +2,25 @@ import psw_manager.manager as manager
 import sys
 
 ACTIONS = {
-	'0': 'show me list of passwords',
-	'1': 'add new password',
-	'2': 'delete password',
-	'3': 'generate new password',
-	'4': 'update resource/password',
+	'show': 'show me list of passwords',
+	'add': 'add new password',
+	'del': 'delete password',
+	'new': 'generate new password',
+	'update': 'update resource/password',
 	'exit': 'exit the program'
 }
 
 def run_command(command: str, **kwargs):
 	result = 'Operation completed successfully'
-	if command == '0':
+	if command == 'show':
 		result = manager.showListPassword()
-	elif command == '1':
+	elif command == 'add':
 		result = manager.add()
-	elif command == '2':
+	elif command == 'del':
 		result = manager.delete()
-	elif command == '3':
+	elif command == 'new':
 		result = manager.create_password()
-	elif command == '4':
+	elif command == 'update':
 		result = manager.update()
 	elif command == 'exit':
 		print('Goodbuy!!!')
